@@ -1,0 +1,10 @@
+version: '3.4'
+services:
+  toolbox-secret-backend:
+      build: ./back
+      ports:
+        - "8080:8080"
+  toolbox-secret-frontend:
+      build: ./front
+      ports:
+        - "3000:3000"
