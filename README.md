@@ -8,6 +8,8 @@ In order to run both projects as separate containers please run ```docker compos
 
 # Frontend
 ## Notes
+This frontend runs on ```port 3000```
+<br>
 This frontend was created with create-react-app.
 <br>
 The requests to the rest API were made with ```axios```
