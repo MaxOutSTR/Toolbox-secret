@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import FileTable from "./FileTable.component"
-import Spinner from "react-bootstrap/esm/Spinner"
+import FileTable from './FileTable.component'
+import Spinner from 'react-bootstrap/esm/Spinner'
 import * as secretService from '../../services/secret.service'
 import './styles/FileTable.styles.css'
-import ErrorMessage from "../common/ErrorMessage.component"
+import ErrorMessage from '../common/ErrorMessage.component'
 const FileTableComponent = () => {
   const [files, setFiles] = useState([])
   const { fileName } = useParams()
@@ -25,7 +25,7 @@ const FileTableComponent = () => {
       } catch (ex) {
         setError(true)
       }
-      return;
+      return
     }
     try {
       secretService.getAllFiles().then((res) => {
@@ -42,15 +42,13 @@ const FileTableComponent = () => {
   }, [])
 
   return (
-    <div className="file-table-container">
+    <div className='file-table-container'>
       {
-        (loading) ?
-          <Spinner animation="border" variant="dark" />
-          :
-          (error) ?
-            <ErrorMessage />
-            :
-            <FileTable files={files} />
+        (loading)
+          ? <Spinner animation='border' variant='dark' />
+          : (error)
+              ? <ErrorMessage />
+              : <FileTable files={files} />
       }
     </div>
   )

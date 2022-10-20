@@ -7,13 +7,13 @@ export const getAllFiles = () => {
 }
 
 export const getFile = (fileName) => {
-    return http.get(apiUrl + '/files/data',{
-      params: {
-        fileName
-      }
-    })
+  return http.get(apiUrl + '/files/data', {
+    params: {
+      fileName
+    }
+  })
 }
 
-export const getFileList = ()=>{
+export const getFileList = () => {
   return http.get(apiUrl + '/files/list')
 }
