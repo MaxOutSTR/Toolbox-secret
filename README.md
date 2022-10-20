@@ -6,6 +6,13 @@ The app shows a list of all files
 # Docker Compose
 In order to run both projects as separate containers please run ```docker compose up --build``` in this repo's root directory (```./```)
 
+# Frontend
+## Notes
+This frontend was created with create-react-app.
+<br>
+The requests to the rest API were made with ```axios```
+<br>
+The main page displays a table with all the files data listed, and if a file is selected in the navbar it loads the lines from that specific file.
 # Backend
 ## Notes
 This backend runs on ```port 8080```
