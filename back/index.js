@@ -1,4 +1,5 @@
 const express = require('express')
+const cors = require('cors')
 const app = express()
 
 const port = 8080
@@ -10,6 +11,7 @@ const logger = (req, res, next) => {
 }
 app.use(express.json())
 app.use(logger)
+app.use(cors())
 
 // Routing
 const filesRouter = require('./src/routes/files')

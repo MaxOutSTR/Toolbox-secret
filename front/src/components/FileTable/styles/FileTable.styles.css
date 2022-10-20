@@ -1,0 +1,16 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.file-table-container{
+  padding: 5em;
+  display: flex;
+  width: 100%;
+  min-width: 80vh;
+  justify-content: center;
+  align-items: center;
+}
+.file-table--file-picker{
+  align-self: flex-end;
+}
